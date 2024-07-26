@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo de imagenes</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color: black" cursor="rayOrigin: mouse">
+
+       
+
+        <a-image src="mg1.jpg" id="img1" position="0 0 -0.5" width="1" height="1" rotation="0 180 0"></a-image>
+
+        <a-image src="img2.jpg" id="img2" position="0 0 0.5" width="1" height="1" rotation="0 0 0"></a-image>
+        <a-text position="1 -1 0" id="text5" value="Marco Antonio Menez Herrera" width="4" color="white" align="center"></a-text>
+
+        <a-image src="img3.jpg" id="img3" position="-0.5 0 0" width="1" height="1" rotation="0 -90 0">
+   
+        </a-image>
+
+        <a-image src="img4.jpg" id="img4" position="0.5 0 0" width="1" height="1" rotation="0 90 0">
+         
+        </a-image>
+
+        <a-image src="font.gif" id="img5" position="0 -0.5 0" width="1" height="1" rotation="90 0 0">
+            
+        </a-image>
+
+        <a-image src="img6.jpg" id="img6" position="0 0.5 0" width="1" height="1" rotation="-90 0 0">
+            <a-text position="0 0 0" id="text6" value="Abajo" width="2" color="white" align="center"></a-text>
+        </a-image>
+
+        <a-text id="txtCv" value="VR Es un entorno de escenas y objetos de apariencia real —generado mediante tecnología informática— que crea en el usuario la sensación de estar inmerso en él."  height="2" position="-5 1 0" visible="false" color="white"></a-text>
+
+
+
+
+      
+        <a-image src="fd1.jpg" id="img1-copy" position="2 0 -0.5" width="1" height="1" rotation="0 180 0">
+            <a-text position="0 0 0" id="text1-copy" value="Enfrente" width="2" align="center"></a-text>
+        </a-image>
+
+        <a-image src="fd2.jpg" id="imgcl1" position="2 0 0.5" width="1" height="1" rotation="0 0 0"></a-image>
+
+        <a-image src="fd3.jpg" id="img3-copy" position="1.5 0 0" width="1" height="1" rotation="0 -90 0">
+  
+        </a-image>
+
+        <a-image src="terminator.jpg" id="img4-copy" position="2.5 0 0" width="1" height="1" rotation="0 90 0">
+         
+        </a-image>
+
+        <a-image src="font.gif" id="img5-copy" position="2 0 -0.5" width="1" height="1" rotation="90 0 0">
+            <a-text position="0 0 0" id="text5-copy" value="Arriba" width="2" color="white" align="center"></a-text>
+        </a-image>
+
+        <a-image src="cie1.jpg" id="img6-copy" position="2 0.5 0" width="1" height="1" rotation="-90 0 0">
+            <a-text position="0 0 0" id="text6-copy" value="Abajo" width="2" color="white" align="center"></a-text>
+        </a-image>
+
+        <a-text id="txtCv1" value="AR: La Realidad Aumentada te permite visualizar, a través de una pantalla, elementos virtuales generados en un entorno físico real." position="2 1 0" visible="false" color="green"></a-text>
+
+        <a-camera position="0 0 3"></a-camera>
+    </a-scene>
+</body>
+
+<script>
+
+    document.querySelector('#img2').addEventListener('click', function () {
+        var texto = document.querySelector('#txtCv');
+        var isVisible = texto.getAttribute('visible');
+        texto.setAttribute('visible', !isVisible);
+    });
+
+   
+    document.querySelector('#imgcl1').addEventListener('click', function () {
+        var texto = document.querySelector('#txtCv1');
+        var isVisible = texto.getAttribute('visible');
+        texto.setAttribute('visible', !isVisible);
+    });
+</script>
+
+</html>
